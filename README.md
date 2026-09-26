@@ -84,6 +84,8 @@ Keyboard controls are identical to the original game. For touch users:
 
 ## Credits
 
+- The [th09 decompilation](https://github.com/YomotsuHisami/th09), used as a reference for the game logic, structure and naming.
+
 - The earlier [decompilation for th06](https://github.com/GensokyoClub/th06), [th07](https://github.com/GensokyoClub/th07) and [th08](https://github.com/GensokyoClub/th08), used as a source of shared types, file names, source organization and archive formats.
 
 - The eagler-th07 `Touch.cpp` (CC0) touch policy, adapted into `portable/input/TouchController.hpp`.
