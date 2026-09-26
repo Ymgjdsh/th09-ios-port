@@ -39,7 +39,7 @@ Populate SDL_ttf's vendored FreeType sources as part of dependency preparation. 
 
 ## Private game resources
 
-The public repository is source-only. It must not contain the original game executable, original data/music, the Microsoft font, derived retail resources, private signing keys, profiles, IPA files, or private test reports. The ignored ios/assets directory is a local build input, not a public asset distribution.
+The public repository is source-only. It must not contain the original game executable, original data/music, the Microsoft font, private signing keys, profiles, IPA files, or private test reports. The ignored ios/assets directory is a local build input, not a public asset distribution. Only the app icon catalog extracted from the original EXE is tracked, so the app keeps the original game icon.
 
 Prepare the asset tree from a Japanese 1.50a copy and font that you are entitled to use:
 
@@ -65,14 +65,14 @@ After preparing all resources, generate assets/manifest.json with a files object
 
 ## Build
 
-Extract the original Japanese EXE icon before configuring the project:
+The app icon catalog extracted from the original Japanese EXE is tracked in `ios/app-icon/`, so configuring the project works without any extra step. To regenerate it from your own copy of the executable:
 
     python3 -m pip install pefile Pillow
     python3 ios/tools/extract_icon.py --exe /private/path/th09.exe
 
-This preserves the original 32×32 icon and generates the iPhone/iPad app icon
-sizes without redrawing. Generated icons stay in the ignored `ios/app-icon/`
-directory. `TH09_ICON_CATALOG` can select an equivalent private asset catalog.
+This preserves the original 32×32 icon and regenerates the iPhone/iPad app icon
+sizes without redrawing. `TH09_ICON_CATALOG` can select an equivalent asset
+catalog instead.
 
 Run these commands from the repository root:
 

@@ -1,9 +1,11 @@
 # Private game resources and locally prepared inputs
 ios/assets/
-ios/app-icon/
 ios/deps/
 th09_web/assets/
 th09_web/reference/
+ios/app-icon/original.ico
+ios/app-icon/original.png
+ios/app-icon/provenance.json
 
 # Build trees and packaged output
 build/
