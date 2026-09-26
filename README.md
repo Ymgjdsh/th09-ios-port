@@ -91,3 +91,9 @@ Keyboard controls are identical to the original game. For touch users:
 - The eagler-th07 `Touch.cpp` (CC0) touch policy, adapted into `portable/input/TouchController.hpp`.
 
 - KSS for the MIT-licensed th08 codec reference used by the archive decoder.
+
+## Assets and licensing
+
+This repository does not include the original Touhou 9 executable, game data, music, font, replay, or save files. The extracted app icon catalog under `ios/app-icon/` is the only asset taken from the original game. A runnable package must be assembled locally from files you are legally allowed to use.
+
+Licensing is component-specific. The CC0 license in `LICENSE` covers this port's source code only, and the notices for the components it bundles are collected in `th09_web/THIRD-PARTY-NOTICES.txt`. Keep the notices and licenses beside each bundled component; no blanket license is asserted for the original game or its assets.
