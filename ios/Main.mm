@@ -350,8 +350,8 @@ extern "C" void th09_native_notice(const char* message){
     if(inputBlocked()||self.gameRect.size.width<=0||self.gameRect.size.height<=0)return;
     for(UITouch* touch in touches){
         CGPoint p=[touch locationInView:self];NSNumber* ident=[self.touchIDs objectForKey:touch];
-        // Menu/dialogue taps remain convenient. During battle movement belongs
-        // to the stick, so fingers resting elsewhere cannot move the player.
+        // Menu taps, dialogue taps and battle dragging all start here; the
+        // joystick tracks its own touch separately.
         if(type==0){if(!CGRectContainsPoint(self.gameRect,p))continue;ident=@(self.nextTouchID++);[self.touchIDs setObject:ident forKey:touch];}
         if(!ident)continue;
         th09_touch(type,ident.intValue,(p.x-self.gameRect.origin.x)/self.gameRect.size.width,(p.y-self.gameRect.origin.y)/self.gameRect.size.height);
