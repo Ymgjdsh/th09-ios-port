@@ -1,0 +1,58 @@
+# Private game resources and locally prepared inputs
+ios/assets/
+ios/app-icon/
+ios/deps/
+th09_web/assets/
+th09_web/reference/
+
+# Build trees and packaged output
+build/
+dist/
+artifacts/
+*.ipa
+*.xcarchive/
+*.dSYM/
+
+# Development toolchains
+tools/*
+!tools/download-emscripten.py
+node_modules/
+
+# Local state, saves, replays and logs
+*.log
+*.rpy
+*.rpyx
+score*.dat
+*.cfg
+.cache/
+test-results/
+
+# Signing material and secrets
+*.mobileprovision
+*.p12
+*.pfx
+*.pem
+*.key
+*.jks
+.env
+.npmrc
+
+# Compiled artifacts and original executables
+*.exe
+*.dll
+*.wasm
+*.o
+*.obj
+*.a
+*.bin
+*.dat
+*.wav
+*.ogg
+*.flac
+*.ttc
+
+# Python/CMake byproducts
+__pycache__/
+*.pyc
+CMakeCache.txt
+CMakeFiles/
